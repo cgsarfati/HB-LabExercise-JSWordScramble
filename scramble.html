@@ -12,6 +12,7 @@
     <h1>A JavaScript Word Scramble Game</h1>
 
     <script>
+    "use strict";
         var WORDS     = ["booger", "apple", "hackbright", "mango"];
         var SCRAMBLED = ["oogreb", "papel", "backrhight", "goman"];
 
@@ -26,17 +27,22 @@
             // Grab the corresponding scrambled word from the SCRAMBLED array.
 
             var scrambledWord = SCRAMBLED[randomNum];
-            alert(scrambledWord);
+            // alert(scrambledWord);
 
             // Prompt the user to guess the original word when given the scrambled word.
 
             var userGuess = prompt("Guess the original word of " + scrambledWord);
 
-            alert(userGuess);
+            // alert(userGuess);
 
             // If the user guesses wrong, tell them they were wrong and show the right word.
-            
             // If the user guesses the correct word, congratulate them.
+
+            if (userGuess === randomWord) {
+                alert("Congratulations! You guessed right!");
+            } else {
+                alert("Sorry, the right answer was " + randomWord);
+            }
 
             playing = confirm("Press OK To keep playing or Cancel to quit");
 
