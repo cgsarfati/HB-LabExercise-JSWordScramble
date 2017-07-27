@@ -33,7 +33,7 @@
 
             var userGuess = prompt("Guess the original word of " + scrambledWord);
 
-            // alert(userGuess);
+            userGuess = userGuess.toLowerCase().trim();
 
             // If the user guesses wrong, tell them they were wrong and show the right word.
             // If the user guesses the correct word, congratulate them.
